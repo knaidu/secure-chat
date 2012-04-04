@@ -1,3 +1,7 @@
+/**
+ * @file Client.java This file contains client side code for the secure chat application
+ * @author Karthik Naidu
+ */
 import java.io.PrintWriter;
 import java.io.OutputStreamWriter;
 import java.io.BufferedReader;
