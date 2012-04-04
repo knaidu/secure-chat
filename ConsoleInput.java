@@ -1,3 +1,7 @@
+/**
+ * @file ConsoleInput.java This file contains console input options to run the secure chat application
+ * @author Karthik Naidu
+ */
 import java.util.concurrent.*;
 
 public class ConsoleInput {
