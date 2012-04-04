@@ -1,3 +1,7 @@
+/**
+ * @file ConsoleInputReadTask.java This file contains code to read console input for secure chat application
+ * @author Karthik Naidu
+ */
 import java.io.*;
 import java.util.concurrent.Callable;
 
@@ -5,22 +9,19 @@ public class ConsoleInputReadTask implements Callable<String> {
   public String call() throws IOException {
     BufferedReader br = new BufferedReader(
         new InputStreamReader(System.in));
-    //System.out.println("ConsoleInputReadTask run() called.");
+    
     String input;
-    do {
-      //System.out.println("Please type something: ");
+    do {      
       try {
         	// wait until we have data to complete a readLine()
         	while (!br.ready()) {
        			Thread.sleep(200);
          	}
          	input = br.readLine();
-         } catch (InterruptedException e) {
-       		//System.out.println("ConsoleInputReadTask() cancelled");
+         } catch (InterruptedException e) {       		
                 return null;
          }
-      } while ("".equals(input));
-      //System.out.println("Thank You for providing input!");
+      } while ("".equals(input));      
       return input;
     }
  }
