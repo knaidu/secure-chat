@@ -13,7 +13,7 @@ public class ConsoleInputReadTask implements Callable<String> {
     String input;
     do {      
       try {
-        	// wait until we have data to complete a readLine()
+          // wait until we have data to complete a readLine()
         	while (!br.ready()) {
        			Thread.sleep(200);
          	}
