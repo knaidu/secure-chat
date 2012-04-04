@@ -14,13 +14,13 @@ public class ConsoleInputReadTask implements Callable<String> {
     do {      
       try {
           // wait until we have data to complete a readLine()
-        	while (!br.ready()) {
-       			Thread.sleep(200);
-         	}
-         	input = br.readLine();
-         } catch (InterruptedException e) {       		
-                return null;
-         }
+          while (!br.ready()) {
+            Thread.sleep(200);
+          }
+          input = br.readLine();
+        } catch (InterruptedException e) {
+            return null;
+        }
       } while ("".equals(input));      
       return input;
     }
